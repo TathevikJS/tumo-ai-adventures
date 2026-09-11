@@ -1,3 +1,3 @@
 import "./home.css";
 
-export { Home } from "./Home";
+export { Home } from "@/features/home/Home";

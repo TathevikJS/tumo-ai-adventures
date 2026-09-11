@@ -1,5 +1,5 @@
 import { WandIcon } from "@/assets/icons";
-import StartButton from "./StartButton";
+import StartButton from "@/features/home/sections/StartButton";
 
 export default function Hero() {
   return (
