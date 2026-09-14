@@ -1,4 +1,4 @@
-import SkyLayer from "@/features/home/sections/SkyLayer";
+import SkyLayer from "@/features/navigation/sections/SkyLayer";
 
 export default function Main({ children }) {
   return (

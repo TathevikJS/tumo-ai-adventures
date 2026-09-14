@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FlyingDragon from "@/features/home/sections/FlyingDragon";
+import FlyingDragon from "@/features/navigation/sections/FlyingDragon";
 
 export default function SkyLayer() {
   return (
