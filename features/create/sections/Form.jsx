@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { moods, worlds } from "@/features/create/data";
 
@@ -8,10 +9,11 @@ const initialValues = {
   scene: "",
   world: worlds[0],
   pageCount: 8,
-  mood: "Wonder",
+  mood: moods[0],
 };
 
 export default function Form() {
+  const router = useRouter();
   const [values, setValues] = useState(initialValues);
 
   function handleChange(event) {
@@ -24,6 +26,14 @@ export default function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    const params = new URLSearchParams({
+      characterName: values.characterName,
+      scene: values.scene,
+      world: values.world,
+      pageCount: String(values.pageCount),
+      mood: values.mood,
+    });
+    router.push(`/book?${params.toString()}`);
   }
 
   return (

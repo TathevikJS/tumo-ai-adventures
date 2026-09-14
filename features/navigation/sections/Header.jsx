@@ -19,8 +19,18 @@ export default function Header() {
         <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>
           Home
         </Link>
-        <Link href="#adventures">My Adventures</Link>
-        <Link href="#about">About</Link>
+        <Link
+          href="/create"
+          aria-current={pathname === "/create" ? "page" : undefined}
+        >
+          Create
+        </Link>
+        <Link
+          href="/adventures"
+          aria-current={pathname === "/adventures" ? "page" : undefined}
+        >
+          My Adventures
+        </Link>
       </nav>
     </header>
   );

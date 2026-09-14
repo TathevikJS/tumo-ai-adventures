@@ -1,5 +1,5 @@
 const nextConfig = {
-  /* config options here */
+  transpilePackages: ["react-pageflip", "page-flip"],
 };
 
 export default nextConfig;

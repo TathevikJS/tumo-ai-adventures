@@ -1,8 +1,16 @@
+.home:has(.create) {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 .create {
+  flex: 1;
+  min-height: 0;
   display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
   gap: 8px;
   max-width: 560px;
-  padding: 48px 0 32px;
+  padding: 48px 0 8px;
 }
 
 .create .hero {
@@ -12,8 +20,12 @@
 
 .create-form {
   display: grid;
+  align-content: start;
   gap: 16px;
   max-width: 520px;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 24px;
 }
 
 .create-row {
