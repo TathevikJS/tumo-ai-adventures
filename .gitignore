@@ -1,6 +1,6 @@
 # dependencies
-/node_modules
-/.pnp
+node_modules
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -12,11 +12,16 @@
 /coverage
 
 # next.js
-/.next/
+.next/
 /out/
 
 # production
 /build
+
+# python
+.venv/
+__pycache__/
+*.db
 
 # misc
 .DS_Store
