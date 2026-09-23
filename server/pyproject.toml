@@ -1,0 +1,29 @@
+[project]
+name = "server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "TathevikJS", email = "tathevikpiano@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.141.1",
+    "google-genai>=2.23.0",
+    "python-dotenv>=1.2.3",
+    "sqlalchemy>=2.0.53",
+    "uvicorn[standard]>=0.53.0",
+]
+
+[project.scripts]
+server = "server:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pyrefly]
+search-path = ["."]
+python-interpreter-path = "./.venv/bin/python"
+site-package-path = [".venv/lib/python3.11/site-packages"]
+ignore-missing-imports = ["sqlalchemy", "sqlalchemy.*"]
